@@ -1,0 +1,300 @@
+/* reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    /* Layout */
+    --width-mobile: 375px;
+    --width-desktop: 1440px;
+  
+    /* Colors - Primary */
+    --color-white: hsl(0, 0%, 100%);
+    --color-black: hsl(0, 0%, 0%);
+    --color-dark-gray: hsl(0, 0%, 55%);
+    --color-very-dark-gray: hsl(0, 0%, 41%);
+  
+    /* Typography */
+    --font-size-body: 15px;
+  
+    /* Fonts */
+    --font-family-alata: 'Alata', sans-serif;
+    --font-weight-alata: 400;
+    
+    --font-family-josefin-sans: 'Josefin Sans', sans-serif;
+    --font-weight-josefin-sans: 300;
+  }
+
+html,body {
+    width: 100%;
+    min-height: 100vh;
+    max-width: 1440px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-alata);
+    font-weight: var(--font-weight-alata);
+    font-size: var(--font-size-body);
+    color: var(--color-very-dark-gray);
+    background-color: var(--color-white);
+    scroll-behavior: smooth;
+    }
+body {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-alata);
+    font-weight: var(--font-weight-alata);
+    font-size: var(--font-size-body);
+    color: var(--color-very-dark-gray);
+    background-color: var(--color-white);
+  }
+  
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: var(--color-white);
+    padding: 4rem 0rem;
+    margin-left: 1rem;
+    z-index: 10;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    text-align: center; 
+  
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-josefin-sans);
+    font-weight: var(--font-weight-josefin-sans);
+  }
+main {
+    margin: 5rem;
+
+  }
+footer {
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--color-black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-white);
+    text-align: left;
+  }
+.logo {
+    color: var(--color-white);
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: -20%;
+  }
+.logo:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+  }
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+
+/* hero */
+}
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('images/desktop/image-hero.jpg') no-repeat center center/cover;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-white);
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin-left: -65%;
+    text-align: left;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin: 0;
+    border: 2px solid white;
+    padding: 2rem;
+    z-index: 1;
+
+}
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0rem;
+}
+
+.about-img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    z-index: 0;
+}
+.about-content {
+    position: absolute;
+    top: 130%;
+    left: 40%;
+    width: 30%;
+    height: auto;
+    padding: 2rem;
+    z-index: 1;
+    background-color: white;
+}
+.our-creations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0rem;
+    text-align: center;
+    color: var(--color-black);
+    text-decoration: none;
+    font-weight: bold;
+}
+.our-creations h2 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 2rem;
+    z-index: 1;
+}
+
+.our-creations button {
+    background-color: black;
+    color: white;
+    padding: 0.2rem 2rem;
+    cursor: pointer;
+}
+/* grid-of-8 */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+/* transition to opacity white on hover */
+.grid-item {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    z-index: 0;
+    background-color: white;
+}
+.grid-item img {
+    transition: 0.5s ease-in-out;
+}
+.grid-item:hover img {
+    opacity: 0.5;
+}
+.grid-item:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}   */
+
+.text {
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: var(--color-white);
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    font-family: var(--font-family-josefin-sans);
+    z-index: 1;
+}
+
+.footer-content-left {
+    display: flex;
+    justify-content: space-between;
+    align-content: left;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    margin: 0rem;
+    color: var(--color-white);
+    font-size: 0.5rem;
+    font-weight: bold;
+    line-height: 1.5;
+    font-family: var(--font-family-josefin-sans);
+}
+.footer-logo {
+    margin-bottom: 1rem; /* Add some spacing between logo and links */
+}
+.nav-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-content-right img {
+    margin: 0.5rem 0; /* Ensure consistent spacing between icons */
+}
+
+.footer-content-right p {
+    margin-top: 1rem; /* Add some spacing between icons and text */
+    font-size: 0.8rem;
+}
+
+
+
